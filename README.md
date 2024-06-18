@@ -1,7 +1,7 @@
 ### Implementation of Monocular Visual SLAM in Python:
 
 
-## Setup pangolin for python:
+## Setup g2o and pangolin for python:
 
 #### Install pangolin python:
 The [original library](https://github.com/stevenlovegrove/Pangolin) is written in c++, but there is [python binding](https://github.com/uoip/pangolin) available. 
@@ -32,7 +32,35 @@ python setup.py install
 
 In the `make -j8` you might get some error, just follow the comment mentioned in this [github issue](https://github.com/uoip/pangolin/issues/33#issuecomment-717655495). Running the `python setup.py install` might throw an silly error, use this [comment](https://github.com/uoip/pangolin/issues/20#issuecomment-498211997) from the exact issue to solve this. 
 
-- Other dependencies are pip installable.
+---
+
+#### Setup g2o:
+The [original library](https://github.com/RainerKuemmerle/g2o) is written in c++, but there is [python binding](https://github.com/uoip/g2opy) available. 
+
+- **Install dependency:** On *Ubuntu/Debian* these dependencies are resolved by installing the following packages.
+
+```
+sudo apt install cmake libeigen3-dev libspdlog-dev libsuitesparse-dev qtdeclarative5-dev qt5-qmake libqglviewer-dev-qt5
+```
+
+- **Install Library:** Install the *g2o* python using the below library
+
+```
+git clone https://github.com/uoip/g2opy.git
+cd g2opy
+mkdir build
+cd build
+cmake ..
+make -j8
+cd ..
+python setup.py install
+```
+
+- In the `make -j8` step the compilation might fail, for that follow this [comment](https://github.com/uoip/g2opy/issues/46#issuecomment-704190419) from the same issue.
+
+---
+
+- Other dependencies are pip installable using `requirements.txt`.
 
  
 ## How to run?
