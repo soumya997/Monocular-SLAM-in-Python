@@ -1,5 +1,9 @@
 ### Implementation of Monocular Visual SLAM in Python:
 
+<img src="media/featured.gif">
+
+
+> **Blog link: [Understanding Visual SLAM for Robotics Perception Building Monocular SLAM from Scratch in Python](https://learnopencv.com/monocular-slam-in-python/)**
 
 ## Setup g2o and pangolin for python:
 
